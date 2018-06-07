@@ -5,7 +5,7 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
 function resolve (dir) {
-  console.log('=========@path:' + path.join(__dirname, '.', 'src'))
+  console.log('=========>>path>>' + path.join(__dirname, '.', 'src'))
   return path.join(__dirname, '.', dir)
 }
 

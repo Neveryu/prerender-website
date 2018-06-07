@@ -11,14 +11,15 @@
         <p>国内旅游、国外旅游、自助旅游、自驾旅游、油轮签证、主题旅游等各种最新热门旅游推荐</p>
       </section>
       <figure v-for="(tourItem, index) of tourData" :key="index">
-        <img :src="'/static/tour/' + tourItem.url" alt="">
+        <img :src="'/static/tour/' + tourItem.url" :alt="tourItem.title">
         <figcaption>
-          <strong class="title">&lt; {{ tourItem.title }} &gt;</strong>
-          包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
+          <strong class="title">&lt;{{ tourItem.title }}&gt;</strong>
+          {{ tourItem.description }}
           <div>
-            <em>满意度：{{ tourItem.degree }}</em>
-            <span>¥{{ tourItem.price }}</span>
+            <em class="sat">满意度 {{ tourItem.degree }}</em>
+            <span class="price">¥ <strong>{{ tourItem.price }}</strong> 起</span>
           </div>
+          <div class="type">{{tourItem.type}}</div>
         </figcaption>
       </figure>
     </div>
@@ -88,7 +89,7 @@
       cursor pointer
   #tour
     width 1263px
-    height 1200px
+    height 1150px
     margin 30px auto
     text-align center
     background-color #eee
@@ -100,6 +101,7 @@
       p
         color #666
     figure
+      position relative
       display inline-block
       width 380px
       margin 15px 12px
@@ -109,11 +111,37 @@
       img
         vertical-align middle
       figcaption
+        font-size 14px
         line-height 1.5
         letter-spacing 1px
         color #777
         text-align left
+        padding 7px 0 5px 0
         .title
           color #333
           font-weight normal
+        .sat
+          position relative
+          top 5px
+          right 5px
+          float right
+          font-size 13px
+          color #999
+          font-style normal
+        .price
+          color #f60
+          strong
+            font-size 20px
+            letter-spacing 1px
+        .type
+          position absolute
+          top 4px
+          left 4px
+          width 90px
+          height 25px
+          line-height 25px
+          font-size 14px
+          text-align center
+          color #fff
+          background-color #59b200
 </style>

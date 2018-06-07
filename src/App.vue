@@ -14,12 +14,17 @@
       </div>
     </header>
     <router-view></router-view>
+    <yu-footer></yu-footer>
   </div>
 </template>
 
 <script>
+import YuFooter from '@/components/footer'
 export default {
   name: 'app',
+  components: {
+    YuFooter
+  },
   data() {
     return {
       menus: [
@@ -33,7 +38,6 @@ export default {
   },
   methods: {
     isActive(route) {
-      // console.log(route === this.$route.path)
       return route === this.$route.path || route === this.$route.fullPath
     }
   },
