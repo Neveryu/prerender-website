@@ -35,4 +35,23 @@ const hotInfo = [
   }
 ]
 
-export { tag, hotInfo }
+const boxInfo = [
+  {
+    logo: 'trea1',
+    name: '天气预报'
+  },
+  {
+    logo: 'trea2',
+    name: '火车票查询'
+  },
+  {
+    logo: 'trea3',
+    name: '航空查询'
+  },
+  {
+    logo: 'trea4',
+    name: '地铁线路查询'
+  }
+]
+
+export { tag, hotInfo, boxInfo }

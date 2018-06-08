@@ -6,9 +6,7 @@
         <div class="sidebox recommend">
           <h2>景点推荐</h2>
           <div class="tag">
-            <ul>
-              <li v-for="item of tagList">{{item}}</li>
-            </ul>
+            <a href="javascript:;" v-for="item of tagList">{{item}}</a>
           </div>
         </div>
         <div class="sidebox hot">
@@ -22,18 +20,21 @@
         </div>
         <div class="sidebox treasure">
           <h2>旅游百宝箱</h2>
+          <div class="box">
+            <a href="javascript:;" :class="'trea' + (index+1)" v-for="(item, index) of boxList">{{item.name}}</a>
+          </div>
         </div>
       </aside>
       <div class="list">
         list
-        再看第7章
+        再看第8章
       </div>
     </div>
   </div>
 </template>
 <script>
   import YuHeader from '@/components/header'
-  import { tag, hotInfo } from '@/data/information'
+  import { tag, hotInfo, boxInfo } from '@/data/information'
   export default {
     name: 'information',
     components: {
@@ -42,19 +43,20 @@
     data() {
       return {
         tagList: [],
-        hotList: []
+        hotList: [],
+        boxList: []
       }
     },
     created() {
       this.tagList = tag
       this.hotList = hotInfo
+      this.boxList = boxInfo
     }
   }
 </script>
 <style scoped lang="stylus">
   #container
     width 1263px
-    height 1200px
     margin 30px auto
     .sidebar
       float right
@@ -72,18 +74,55 @@
           height 40px
           line-height 40px
           color #666
+          background-color #fafafa
           text-align left
         .tag
+          text-align center
+          padding 10px 0
           a
+            display inline-block
             width 100px
             height 35px
             line-height 35px
-            color #888
-        .hot
+            margin 2px 0 2px 4px
+            color #999
+            background-color #eee
+            text-align left
+            text-indent 8px
+            &:hover
+              background-color #458b00
+              color #fff
+      .hot
+        .figure
+          padding 10px 0
           figure
             display inline-block
+            padding 4px
+            color #666
+      .treasure
+        .box
+          text-align center
+          padding 10px 0
+          a
+            display inline-block
+            width 150px
+            height 40px
+            line-height 40px
+            margin 2px 0 2px 4px
+            color #999
+            background-color #eee
+            text-align left
+            text-indent 35px
+            &.trea1
+              background #eee url('/static/box/trea1.png') no-repeat 10px center
+            &.trea2
+              background #eee url('/static/box/trea2.png') no-repeat 10px center
+            &.trea3
+              background #eee url('/static/box/trea3.png') no-repeat 10px center
+            &.trea4
+              background #eee url('/static/box/trea4.png') no-repeat 10px center
     .list
       float left
-      width 900px
+      width 910px
       height 1200px
 </style>

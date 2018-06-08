@@ -28,7 +28,7 @@
         <ul>
           <li>微博：<a class="weiboLink" href="https://weibo.com/Neveryu">@我不管你姓什么</a></li>
           <li>邮件：<a class="emailLink" href="mailto:never_yu@foxmail.com?cc=never_yu@qq.com&bcc=never_yu@qq.com&subject=From%20your%20travel%20site%20power%20by%20vue%20and%20prerender!">never_yu@foxmail.com</a></li>
-          <li>地址：深圳街头</li>
+          <li>地址：马路边上</li>
           <li>广告位招租</li>
         </ul>
       </div>
@@ -54,9 +54,11 @@
 <style scoped lang="stylus">
   #footer
     position relative
+    top 20px
     height 360px
     background-color #222
     color #ccc
+    clear both
     .top
       width 1263px
       height 280px
