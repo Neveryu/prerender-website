@@ -67,7 +67,9 @@ export default {
         height 70px
         float left
         text-indent -9999px
-        background-image url('~@/assets/logo.png')
+        background-image url('~@/assets/logo1.png')
+        background-size contain
+        background-repeat no-repeat
       .link
         float right
         width 650px

@@ -2,7 +2,7 @@
   <div id="headline">
     <div class="center">
       <hgroup>
-        <h2>旅游咨询</h2>
+        <h2>旅游资讯</h2>
         <h3>介绍各种最新的旅游信息、资讯要闻、景点攻略等</h3>
       </hgroup>
     </div>

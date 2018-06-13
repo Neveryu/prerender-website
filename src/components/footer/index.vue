@@ -26,7 +26,7 @@
         <h2>联系方式</h2>
         <hr>
         <ul>
-          <li>微博：<a class="weiboLink" href="https://weibo.com/Neveryu">@我不管你姓什么</a></li>
+          <li>微博：<a class="weiboLink" href="https://weibo.com/Neveryu">https://weibo.com/Neveryu</a></li>
           <li>邮件：<a class="emailLink" href="mailto:never_yu@foxmail.com?cc=never_yu@qq.com&bcc=never_yu@qq.com&subject=From%20your%20travel%20site%20power%20by%20vue%20and%20prerender!">never_yu@foxmail.com</a></li>
           <li>地址：马路边上</li>
           <li>广告位招租</li>

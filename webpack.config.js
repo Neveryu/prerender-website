@@ -2,11 +2,12 @@ var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 
 function resolve (dir) {
-  console.log('=========>>path>>' + path.join(__dirname, '.', 'src'))
-  return path.join(__dirname, '.', dir)
+  console.log('=========>>path>>' + path.join(__dirname, 'src'))
+  return path.join(__dirname, dir)
 }
 
 module.exports = {
@@ -70,8 +71,7 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, 'dist'),
-      routes: [ '/', '/about', '/contact' ],
-
+      routes: [ '/', '/home', '/infomation', '/ticket', '/scenery', '/about' ],
       renderer: new Renderer({
         inject: {
           foo: 'bar'
@@ -79,7 +79,15 @@ if (process.env.NODE_ENV === 'production') {
         headless: false,
         renderAfterDocumentEvent: 'render-event'
       })
-    })
+    }),
+    // copy custom static assets
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, './static'),
+        to: path.join(__dirname, 'dist/static'),
+        ignore: ['.*']
+      }
+    ])
   ])
 } else {
   // NODE_ENV === 'development'

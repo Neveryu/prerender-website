@@ -1,7 +1,7 @@
 # 关于这个项目中的一些知识点
 
 1、本项目使用的是 `stylus` 来写样式，关于 `webpack` 中如何配置加载 `.styl` 格式的文件（使用了 `vue-style-loader`）：
-``` javascript
+```
 {
   test: /\.styl$/,
   loader: 'vue-style-loader!css-loader!stylus-loader'
@@ -38,7 +38,7 @@ div 元素在 HTML5 之前就是非常常用的标签，它本身没有任何语
 
 html5 中，section 并不是用来取代 div 的。它是具有语义的文档标签。表示一段文档中的章节，比如包含一个标题和一个段落，而大纲规范中，至少要包含一个标题。
 
-``` html
+```
 // section 至少需要一个 h1 ~ h6
 <section>
   <h2>Never Yu</h2>
@@ -52,7 +52,56 @@ html5 中，section 并不是用来取代 div 的。它是具有语义的文档�
 
 `section`、`nav`、`body` 标签都是需要标题的，`div`、`header` 标签不需要标题。
 
-5、
+5、关于多个 `a` 标签更规范的写法
+比如：
+```
+// 松散的 <a> 标签
+<a href="###">item1</a>
+<a href="###">item2</a>
+<a href="###">item3</a>
+```
+这样写使用多个标签有什么问题？具体如下：
+
+- 从语义不明确，如果外部包含 ul 可以理解为标签列表
+- 从 css 布局排版上，ul 作为一个整体，更容易统一排版
+- 从 seo 角度考虑，大量 a 标签有可能会被判定堆积关键字嫌疑，从而导致网站降权，用 ul 包含判断则让搜索引擎判定为有条例的列表，对搜索引擎更加友好
+
+```
+// 改成这种形式
+<ul>
+    <li><a href="###">item1</a></li>
+    <li><a href="###">item2</a></li>
+    <li><a href="###">item3</a></li>
+</ul>
+```
+
+6、关于 Node 中 `resolve` 和 `join` 的区别
+
+> 以下为我个人见解（能让我明白就行），官方介绍请自行 google
+
+6.1 `path.join`
+
+`path.join()` 方法可以连接任意多个路径字符串。要连接的多个路径可做为参数传入。
+用于连接路径。该方法的主要用途在于，会正确使用当前系统的路径分隔符，Unix系统是 `/` ，Windows系统是 `\`。
+
+```
+path.join(__dirname, 'dist/static')
+```
+
+其实就是字符串的拼接，对于 `./` 和 `../` 会进行正常的路径变化，对于 `/baz` 这样的以 `/` 开头的目录，会直接拼接。
+
+6.2 `path.resolve`
+
+`path.resolve()` 总是返回一个以相当于当前的工作目录的绝对路径。
+
+```
+path.resolve(__dirname, './static')
+```
+
+`path.resolve()` 可以简单的理解为对每个参数依次执行 `cd` 命令，最后执行 `pwd` 命令就是结果。【所以，谨慎使用 `/` 开头的路径】
+
+
+
 
 
 
