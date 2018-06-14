@@ -19,7 +19,10 @@ npm run build
 
 Now check the new `dist` directory for your prerendered static files!
 
-To view the rendered files, you can `npm run prod` if you haven't already and run it in the dist directory.
+To view the rendered files, you can
+```
+npm run prod
+```
 
 Now visit the following routes in your browser (note the trailing slash):
 
