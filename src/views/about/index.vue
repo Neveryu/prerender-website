@@ -47,6 +47,32 @@
             </ul>
           </address>
         </section>
+        <p>&nbsp;</p>
+        <section>
+          <h2>更多内容</h2>
+          <ul class="about-me">
+            <li>
+              <a class="y-btn s-irregularLineMove" href="https://neveryu.github.io/neveryu/" target="_blank">我的首页</a>
+              <a class="y-btn s-irregularDoubleLineMoveTwo" href="https://neveryu.github.io/" target="_blank">博客</a>
+              <a class="y-btn s-irregularColorMove" href="https://blog.csdn.net/csdn_yudong" target="_blank">CSDN</a>
+            </li>
+            <li class="y-li s-irregularShadowMove">
+              <a href="https://github.com/neveryu" target="_blank">GitHub：https://github.com/neveryu</a>
+            </li>
+            <li class="y-li s-svgline">
+              <svg viewBox="0 0 180 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="16" width="180"></rect>
+              </svg>
+              <a href="https://github.com/Neveryu/vue-cms" target="_blank">用 Vue 构建的后台系统：https://github.com/Neveryu/vue-cms</a>
+            </li>
+            <li class="y-li s-svgMutiLine">
+              <svg viewBox="0 0 180 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="16" width="180"></rect>
+              </svg>
+              <a href="https://github.com/Neveryu/prerender-website" target="_blank">本项目 GitHub 地址：https://github.com/Neveryu/prerender-website</a>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   </div>
@@ -161,4 +187,149 @@
         line-height 1.6
         margin 20px 0
         font-style normal
+      .about-me
+        margin 20px 0
+        .y-li
+          position relative
+          height 64px
+          line-height 64px
+          margin 35px 35px
+          text-align center
+          overflow hidden
+          a
+            color #42b983
+        .s-irregularShadowMove
+          border 1px solid #42b983
+          &:hover
+            text-shadow 0 0 20px rgba(255, 255, 255, 0.5)
+            box-shadow inset 0 0 20px rgba(66, 185, 131, .5), 0 0 20px rgba(255, 255, 255, 0.2)
+          &:before
+            content ""
+            position absolute
+            height 200px
+            width 20px
+            background rgba(66, 185, 131, .5)
+            transform translate(-50%, -30%) rotate(45deg)
+            transition 1.5s all cubic-bezier(.2, 1, .25, 1)
+            left -35%
+          &:hover:before
+            left 135%
+        .s-svgMutiLine
+          height 80px
+          line-height 80px
+          .shape
+            fill transparent
+            stroke-width .5px
+            stroke red
+            stroke-dasharray 100 230
+            stroke-dashoffset 100
+            transition all 1s  
+          a
+            position absolute
+            line-height 80px
+            top 0
+            left 150px
+            transition all .5s
+          &:hover
+            .shape
+              stroke #42b983
+              stroke-dasharray 50 0
+              stroke-dashoffset 0
+              stroke-width .5px
+            a
+              color red
+        .s-svgline
+          height 80px
+          line-height 80px
+          .shape
+            fill transparent
+            stroke-width .5px
+            stroke red
+            stroke-dasharray 100 230
+            stroke-dashoffset 100
+            transition all 1s  
+          a
+            position absolute
+            line-height 80px
+            top 0
+            left 150px
+            transition all .5s
+          &:hover
+            .shape
+              stroke #42b983
+              stroke-dasharray 488
+              stroke-dashoffset 0
+              stroke-width .5px
+            a
+              color red
+        .y-btn
+          position relative
+          display inline-block
+          height 64px
+          line-height 64px
+          margin 0 35px
+          text-align center
+          color #42b983
+          cursor pointer
+          transition .2s all
+        .s-irregularLineMove
+          width 180px
+          &:before
+            content ""
+            position absolute
+            right 0
+            bottom 0
+            width 0
+            height 1px
+            background-color #42b983
+            transition .2s all
+          &:hover:before
+            left 0
+            width 100%
+        .s-irregularDoubleLineMoveTwo
+          width 180px
+          &:before
+            content ""
+            position absolute
+            right 0
+            bottom 0
+            width 0
+            height 1px
+            background-color #42b983
+            transition .2s all
+          &:hover:before 
+            left 0
+            width 100%
+          &:after 
+            content ""
+            position absolute
+            width 180px
+            height 1px
+            top 0
+            left 0
+            background-color #42b983
+            transform scale3d(0, 1, 1)
+            transition .2s transform
+            transform-origin 0 0
+          &:hover:after 
+            transform scale3d(1, 1, 1)
+            transform-origin 100% 100%
+        .s-irregularColorMove
+          width 180px
+          border 1px solid #42b983
+          &:before
+            content ""
+            position absolute
+            right 0
+            bottom 0
+            width 0
+            height 100%
+            background-color #42b983
+            transition .2s all
+            z-index -1
+          &:hover
+            color #fff
+          &:hover:before
+            left 0
+            width 100%
 </style>

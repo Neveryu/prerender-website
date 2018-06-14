@@ -1,29 +1,34 @@
-# 一个非常帅气的门户网站（旅游）
+# A beautiful website with tour
 
 Vue.js 2.0 + vue-router Prerender SPA Example
 
-Demonstrates usage of Vuejs 2.0 with Vue Router and Webpack 3. Build will generate 3 static routes at the following paths:
+Demonstrates usage of Vuejs 2.0 with Vue Router and Webpack 3. Build will generate 6 static routes at the following paths:
 
 - `/`
+- `/home`
+- `/information`
+- `/ticket`
+- `/scenery`
 - `/about`
-- `/contact`
 
 ## Build
-
-```bash
+```
 npm install
 npm run build
 ```
 
 Now check the new `dist` directory for your prerendered static files!
 
-To view the rendered files, install [http-server](https://www.npmjs.com/package/http-server) (`npm install -g http-server`) if you haven't already and run it in the dist directory.
+To view the rendered files, you can `npm run prod` if you haven't already and run it in the dist directory.
 
 Now visit the following routes in your browser (note the trailing slash):
 
-- [http://localhost:8000/](http://localhost:8000/)
-- [http://localhost:8000/about/](http://localhost:8000/about/)
-- [http://localhost:8000/contact/](http://localhost:8000/contact/)
+- [http://localhost:9999/](http://localhost:9999/)
+- [http://localhost:9999/home](http://localhost:9999/home)
+- [http://localhost:9999/information/](http://localhost:9999/information/)
+- [http://localhost:9999/ticket/](http://localhost:9999/ticket/)
+- [http://localhost:9999/scenery/](http://localhost:9999/scenery/)
+- [http://localhost:9999/about/](http://localhost:9999/about/)
 
 ## Development
 

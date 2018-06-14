@@ -1,3 +1,4 @@
+const rm = require('rimraf')
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -56,39 +57,43 @@ module.exports = {
   devtool: '#eval-source-map'
 }
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new HtmlWebpackPlugin({
-      title: 'PRODUCTION prerender-spa-plugin',
-      template: 'index.html',
-      filename: path.resolve(__dirname, 'dist/index.html'),
-      favicon: 'favicon.ico'
-    }),
-    new PrerenderSPAPlugin({
-      staticDir: path.join(__dirname, 'dist'),
-      routes: [ '/', '/home', '/infomation', '/ticket', '/scenery', '/about' ],
-      renderer: new Renderer({
-        inject: {
-          foo: 'bar'
-        },
-        headless: false,
-        renderAfterDocumentEvent: 'render-event'
-      })
-    }),
-    // copy custom static assets
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, './static'),
-        to: path.join(__dirname, 'dist/static'),
-        ignore: ['.*']
-      }
+  // rm(path.join(__dirname, 'dist'), err => {
+    // if (err) throw err
+
+    module.exports.devtool = '#source-map'
+    module.exports.plugins = (module.exports.plugins || []).concat([
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: '"production"'
+        }
+      }),
+      new HtmlWebpackPlugin({
+        title: 'PRODUCTION prerender-spa-plugin',
+        template: 'index.html',
+        filename: path.resolve(__dirname, 'dist/index.html'),
+        favicon: 'favicon.ico'
+      }),
+      new PrerenderSPAPlugin({
+        staticDir: path.join(__dirname, 'dist'),
+        routes: [ '/', '/home', '/infomation', '/ticket', '/scenery', '/about' ],
+        renderer: new Renderer({
+          inject: {
+            foo: 'bar'
+          },
+          headless: false,
+          renderAfterDocumentEvent: 'render-event'
+        })
+      }),
+      // copy custom static assets
+      new CopyWebpackPlugin([
+        {
+          from: path.resolve(__dirname, './static'),
+          to: path.join(__dirname, 'dist/static'),
+          ignore: ['.*']
+        }
+      ])
     ])
-  ])
+  // })
 } else {
   // NODE_ENV === 'development'
   module.exports.plugins = (module.exports.plugins || []).concat([
