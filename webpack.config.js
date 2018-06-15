@@ -57,9 +57,7 @@ module.exports = {
   devtool: '#eval-source-map'
 }
 if (process.env.NODE_ENV === 'production') {
-  // rm(path.join(__dirname, 'dist'), err => {
-    // if (err) throw err
-
+    module.exports.output.publicPath = '/'
     module.exports.devtool = '#source-map'
     module.exports.plugins = (module.exports.plugins || []).concat([
       new webpack.DefinePlugin({
@@ -93,7 +91,6 @@ if (process.env.NODE_ENV === 'production') {
         }
       ])
     ])
-  // })
 } else {
   // NODE_ENV === 'development'
   module.exports.plugins = (module.exports.plugins || []).concat([
