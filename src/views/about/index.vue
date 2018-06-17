@@ -15,7 +15,7 @@
           <h2>热门旅游</h2>
           <div class="figure">
             <figure v-for="item of hotList">
-              <img :src="'/static/hot/' + item.url" :alt="item.title">
+              <img :src="'./static/hot/' + item.url" :alt="item.title">
               <figcaption>{{item.title}}</figcaption>
             </figure>
           </div>

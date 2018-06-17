@@ -57,7 +57,7 @@ module.exports = {
   devtool: '#eval-source-map'
 }
 if (process.env.NODE_ENV === 'production') {
-    module.exports.output.publicPath = '/'
+    module.exports.output.publicPath = './'
     module.exports.devtool = '#source-map'
     module.exports.plugins = (module.exports.plugins || []).concat([
       new webpack.DefinePlugin({

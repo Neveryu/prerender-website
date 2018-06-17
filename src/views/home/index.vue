@@ -11,7 +11,7 @@
         <p>国内旅游、国外旅游、自助旅游、自驾旅游、油轮签证、主题旅游等各种最新热门旅游推荐</p>
       </section>
       <figure v-for="(tourItem, index) of tourData" :key="index">
-        <img :src="'/static/tour/' + tourItem.url" :alt="tourItem.title">
+        <img :src="'./static/tour/' + tourItem.url" :alt="tourItem.title">
         <figcaption>
           <strong class="title">&lt;{{ tourItem.title }}&gt;</strong>
           {{ tourItem.description }}

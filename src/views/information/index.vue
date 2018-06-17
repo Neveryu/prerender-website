@@ -15,7 +15,7 @@
           <h2>热门旅游</h2>
           <div class="figure">
             <figure v-for="item of hotList">
-              <img :src="'/static/hot/' + item.url" :alt="item.title">
+              <img :src="'./static/hot/' + item.url" :alt="item.title">
               <figcaption>{{item.title}}</figcaption>
             </figure>
           </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="tour-wrapper">
           <figure class="tour" v-for="(item, index) of tourList">
-            <img :src="'/static/tour/' + item.img" :alt="item.name">
+            <img :src="'./static/tour/' + item.img" :alt="item.name">
             <figcaption>
               <article>
                 <header>
