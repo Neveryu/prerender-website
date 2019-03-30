@@ -55,4 +55,11 @@ npm run dev
 ## Note
 在写这个项目的时候也记录了几个知识点：[关于本项目中的知识点](./project-note.md)
 
+## Communication
+
+欢迎加入 QQ 群，共同学习讨论，QQ 群：[685486827](//shang.qq.com/wpa/qunwpa?idkey=32da7a18744756b0d8ffdd05b84999afecb5265dbad0fb119033e122abe803f3) ，<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=32da7a18744756b0d8ffdd05b84999afecb5265dbad0fb119033e122abe803f3">一键加群</a>
+
+<img src="https://neveryu.github.io/images/qq-group.png" alt="vue-music" width="250">
+
+
 
