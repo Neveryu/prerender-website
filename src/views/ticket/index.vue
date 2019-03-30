@@ -103,6 +103,7 @@
   import { tagInfo, hotInfo, boxInfo } from '@/data/information'
   import { hotCity, beijingTravel } from '@/data/ticket'
   export default {
+    title: 'Ticket',
     components: {
       YuHeader
     },

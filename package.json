@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^2.5.11",
+    "vue-meta-info": "^0.1.7",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

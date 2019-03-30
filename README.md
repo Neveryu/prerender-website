@@ -12,7 +12,7 @@ Demonstrates usage of Vuejs 2.0 with Vue Router and Webpack 3. Build will genera
 - `/about`
 
 ## Build
-```
+``` bash
 npm install
 npm run build
 ```
@@ -20,7 +20,7 @@ npm run build
 Now check the new `dist` directory for your prerendered static files!
 
 To view the rendered files, you can
-```
+``` bash
 npm run prod
 ```
 
@@ -39,7 +39,7 @@ To edit the `prerender-spa-plugin` configuration, look for `new PrerenderSPAPlug
 
 If you're using a router or have more than one page to prerender, edit the `routes` array under that config object.
 
-```
+``` bash
 npm install
 npm run dev
 ```

@@ -1,5 +1,9 @@
 # 关于这个项目中的一些知识点
 
+0、 有了预渲染，我们可以解决很多方面的 `SEO` 问题，但有时候我们也会需要 `meta` 信息的变化，比如 `title`，`meta keywords` 或者是 `link`；那么这里我们可以使用 `vue-meta-info`，一个可以动态设置 `meta` 信息的 `Vue` 插件，如果需要单页面 `SEO`，可以和 `prerender-spa-plugin` 形成更好的配合。
+
+`vue-meta-info` 是一个基于 `Vue 2.0` 的插件，它会让你更好的管理你的 `app` 里的 `meta` 信息。你可以直接在组件内设置 `metaInfo` 便可以自动挂载到你的页面中。如果你需要随着页面的变化，自动更新你的 `Title`、`meta`等信息，那么用此插件非常合适。
+
 1、本项目使用的是 `stylus` 来写样式，关于 `webpack` 中如何配置加载 `.styl` 格式的文件（使用了 `vue-style-loader`）：
 ```
 {

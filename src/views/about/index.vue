@@ -40,12 +40,17 @@
           <address>
             <ul>
               <li>Yu 旅行社股份有限公司</li>
-              <li>地址：广东省深圳市南山区海水西路南海街道666号</li>
-              <li>邮编：12345678</li>
-              <li>电话：010-8888***888</li>
-              <li>传真：010-6666***666</li>
+              <li>地 址：广东省深圳市南山区海水西路南海街道666号</li>
+              <li>电 话：010-8888***888</li>
+              <li>传 真：010-6666***666</li>
+              <li>QQ群：<a class="qq-group" target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=32da7a18744756b0d8ffdd05b84999afecb5265dbad0fb119033e122abe803f3">685486827</a></li>
             </ul>
           </address>
+        </section>
+        <p>&nbsp;</p>
+        <section>
+          <h2>交流学习</h2>
+          <img src="~@/assets/qq-group.png" width="250" alt="">
         </section>
         <p>&nbsp;</p>
         <section>
@@ -73,6 +78,20 @@
             </li>
           </ul>
         </section>
+        <p>&nbsp;</p>
+        <section>
+          <h2>有缘再见</h2>
+          <p>调研完 Vue 的预渲染，如果你对 Vue 的服务端渲染，仍然有需求，请移步：</p>
+          <ul class="about-me">
+            <li class="y-li s-svgline">
+              <svg viewBox="0 0 180 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="16" width="180"></rect>
+              </svg>
+              <a href="https://github.com/Neveryu/vue-ssr-lessons" target="_blank">Vue 服务端渲染课程：https://github.com/Neveryu/vue-ssr-lessons</a>
+            </li>
+          </ul>
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=548109162&auto=0&height=66"></iframe>
+        </section>
       </div>
     </div>
   </div>
@@ -82,6 +101,7 @@
   import YuHeader from '@/components/header'
   import { tagInfo, hotInfo, boxInfo } from '@/data/information'
   export default {
+    title: 'About',
     components: {
       YuHeader
     },
@@ -180,13 +200,15 @@
         padding 0 0 10px 0
         font-weight normal
         font-size 30px
-      p
+      p, img
         line-height 2
         margin 20px 0
       address
         line-height 1.6
         margin 20px 0
         font-style normal
+        a.qq-group
+          color: red
       .about-me
         margin 20px 0
         .y-li

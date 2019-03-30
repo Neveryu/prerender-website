@@ -46,6 +46,7 @@
   import { tagInfo, hotInfo, boxInfo } from '@/data/information'
   import { sceneryInfo } from '@/data/scenery'
   export default {
+    title: 'Scenery',
     components: {
       YuHeader
     },

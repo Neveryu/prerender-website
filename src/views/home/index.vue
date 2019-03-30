@@ -29,6 +29,7 @@
 <script>
   import tourObj from '@/data/home'
   export default {
+    title: 'Home',
     data() {
       return {
         tourData: []

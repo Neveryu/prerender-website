@@ -29,7 +29,7 @@
           <li>微博：<a class="weiboLink" href="https://weibo.com/Neveryu">https://weibo.com/Neveryu</a></li>
           <li>邮件：<a class="emailLink" href="mailto:never_yu@foxmail.com?cc=never_yu@qq.com&bcc=never_yu@qq.com&subject=From%20your%20travel%20site%20power%20by%20vue%20and%20prerender!">never_yu@foxmail.com</a></li>
           <li>地址：马路边上</li>
-          <li>广告位招租</li>
+          <li>QQ群：<a class="qq-group" target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=32da7a18744756b0d8ffdd05b84999afecb5265dbad0fb119033e122abe803f3">685486827</a></li>
         </ul>
       </div>
       <div class="vue-sell">
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="bottom">
-      Copyright© 2017 - 2018 | Author <a class="authorLink" href="https://neveryu.github.io/neveryu/">Never Yu</a> | All Rights Reserved | Power by <a class="vueLink" href="javascript:;">Vue</a> & <a class="vueLink" href="javascript:;">prerender</a>
+      Copyright© 2017 - 2019 | Author <a class="authorLink" href="https://neveryu.github.io/neveryu/">Never Yu</a> | All Rights Reserved | Power by <a class="vueLink" href="javascript:;">Vue</a> & <a class="vueLink" href="javascript:;">prerender</a>
     </div>
   </footer>
 </template>
@@ -74,6 +74,8 @@
           color #fc0
         .emailLink
           color #f66
+        .qq-group
+          color #42b983
         h2
           font-size 24px
           font-weight normal

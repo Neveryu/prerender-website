@@ -66,14 +66,14 @@ if (process.env.NODE_ENV === 'production') {
         }
       }),
       new HtmlWebpackPlugin({
-        title: 'PRODUCTION prerender-spa-plugin',
+        title: '',
         template: 'index.html',
         filename: path.resolve(__dirname, 'dist/index.html'),
         favicon: 'favicon.ico'
       }),
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'dist'),
-        routes: [ '/', '/home', '/infomation', '/ticket', '/scenery', '/about' ],
+        routes: [ '/', '/home', '/information', '/ticket', '/scenery', '/about' ],
         renderer: new Renderer({
           inject: {
             foo: 'bar'

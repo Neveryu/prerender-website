@@ -77,6 +77,7 @@
   import { tagInfo, hotInfo, boxInfo, tourInfo } from '@/data/information'
   export default {
     name: 'information',
+    title: 'Information',
     components: {
       YuHeader
     },
