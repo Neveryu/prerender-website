@@ -18,8 +18,8 @@ git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # 手动部署
-git push -f git@github.com:Neveryu/prerender-website.git master:gh-pages
+# git push -f git@github.com:Neveryu/prerender-website.git master:gh-pages
 # 自动部署
-# git push -f "https://${access_token}@github.com/Neveryu/prerender-website.git" master:gh-pages
+git push -f "https://${access_token}@github.com/Neveryu/prerender-website.git" master:gh-pages
 
 cd -
