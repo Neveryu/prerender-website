@@ -110,8 +110,8 @@ path.resolve(__dirname, './static')
 在 `main.js` 中：
 ```
 mounted () {
-// You'll need this for renderAfterDocumentEvent.
-    document.dispatchEvent(new Event('render-event'))
+  // You'll need this for renderAfterDocumentEvent.
+  document.dispatchEvent(new Event('render-event'))
 }
 ```
 这个是必须的，因为只有这里触发了事件 `render-evnet`，`prerender-spa-plugin` 才会开始预渲染。

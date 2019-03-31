@@ -182,13 +182,13 @@
             text-align left
             text-indent 35px
             &.trea1
-              background #eee url('/static/box/trea1.png') no-repeat 10px center
+              background #eee url('~/static/box/trea1.png') no-repeat 10px center
             &.trea2
-              background #eee url('/static/box/trea2.png') no-repeat 10px center
+              background #eee url('~/static/box/trea2.png') no-repeat 10px center
             &.trea3
-              background #eee url('/static/box/trea3.png') no-repeat 10px center
+              background #eee url('~/static/box/trea3.png') no-repeat 10px center
             &.trea4
-              background #eee url('/static/box/trea4.png') no-repeat 10px center
+              background #eee url('~/static/box/trea4.png') no-repeat 10px center
     .list
       width 910px
       color #666
