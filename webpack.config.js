@@ -75,7 +75,7 @@ if (process.env.NODE_ENV === 'production') {
         staticDir: path.join(__dirname, 'dist'),
         routes: [ '/', '/home', '/information', '/ticket', '/scenery', '/about' ],
         renderer: new Renderer({
-          headless: false,
+          headless: true,
           renderAfterDocumentEvent: 'render-event'
         })
       }),
