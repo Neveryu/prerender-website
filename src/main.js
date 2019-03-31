@@ -19,7 +19,7 @@ new Vue({
   mounted () {
     // You'll need this for renderAfterDocumentEvent.
     document.dispatchEvent(new Event('render-event'))
-    setTimeout(console.log.bind(console, '20190331 18:30'), 1000)
+    setTimeout(console.log.bind(console, '20190331 22:30'), 1000)
     setTimeout(console.log.bind(console, 'qq群：685486827'), 2000)
   }
 })

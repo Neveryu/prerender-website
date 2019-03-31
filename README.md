@@ -1,6 +1,14 @@
 # A beautiful website with tour
 
-Vue.js 2.0 + vue-router + prerender-spa-plugin 3.x Prerender SPA Example
+<p align="center">
+  <a href="https://travis-ci.org/Neveryu/web-bookmarks"><img src="https://travis-ci.org/Neveryu/web-bookmarks.svg?branch=master" alt="Travis CI"></a>
+  <a href="https://github.com/Neveryu/prerender-website/blob/master/LICENSE"><img src="https://img.shields.io/github/license/NeverYu/prerender-website.svg" alt="License"></a>
+  <a href="https://neveryu.github.io/reward/index.html">
+    <img src="https://img.shields.io/badge/%24-donate-ff69b4.svg" alt="donate">
+  </a>
+</p>
+
+>Vue.js 2.0 + vue-router + prerender-spa-plugin 3.x Prerender SPA Example
 
 这里使用的是 `prerender-spa-plugin` stable `3.x` 版本，基于 `puppeteer`。
 如果你使用的 `2.x` 版本，则是基于 `PhantomJS`。
