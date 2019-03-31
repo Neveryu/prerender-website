@@ -58,7 +58,7 @@ module.exports = {
 }
 if (process.env.NODE_ENV === 'production') {
     module.exports.output.publicPath = './'
-    module.exports.devtool = '#source-map'
+    module.exports.devtool = '#cheap-module-source-map'
     module.exports.plugins = (module.exports.plugins || []).concat([
       new webpack.DefinePlugin({
         'process.env': {
@@ -66,7 +66,7 @@ if (process.env.NODE_ENV === 'production') {
         }
       }),
       new HtmlWebpackPlugin({
-        title: '',
+        title: 'PRODUCTION prerender-spa-plugin',
         template: 'index.html',
         filename: path.resolve(__dirname, 'dist/index.html'),
         favicon: 'favicon.ico'
@@ -75,9 +75,6 @@ if (process.env.NODE_ENV === 'production') {
         staticDir: path.join(__dirname, 'dist'),
         routes: [ '/', '/home', '/information', '/ticket', '/scenery', '/about' ],
         renderer: new Renderer({
-          inject: {
-            foo: 'bar'
-          },
           headless: false,
           renderAfterDocumentEvent: 'render-event'
         })

@@ -1,6 +1,11 @@
 # A beautiful website with tour
 
-Vue.js 2.0 + vue-router Prerender SPA Example
+Vue.js 2.0 + vue-router + prerender-spa-plugin 3.x Prerender SPA Example
+
+这里使用的是 `prerender-spa-plugin` stable `3.x` 版本，基于 `puppeteer`。
+如果你使用的 `2.x` 版本，则是基于 `PhantomJS`。
+
+**重要提示：** 如果你在 `npm install` 时一直没有没有等到成功的结果，你可以尝试删除掉 `package-lock.json` 和 `node_modules` 再尝试；如果还是不行，你可以选择尝试删除掉 `package-lock.json` 和 `node_modules` 后，使用 `npm install --registry=https://registry.npm.taobao.org` 来安装。（究其原因，我在 `web-bookmarks` 中有提到：[npm 与 cnpm 要点](https://neveryu.github.io/web-bookmarks/tech/npm-cnpm.html)）
 
 Demonstrates usage of Vuejs 2.0 with Vue Router and Webpack 3. Build will generate 6 static routes at the following paths:
 
@@ -16,6 +21,8 @@ Demonstrates usage of Vuejs 2.0 with Vue Router and Webpack 3. Build will genera
 npm install
 npm run build
 ```
+
+> **重要提示：** 如果你在 `npm install` 时一直没有没有等到成功的结果，你可以尝试删除掉 `package-lock.json` 和 `node_modules` 再尝试；如果还是不行，你可以选择尝试删除掉 `package-lock.json` 和 `node_modules` 后，使用 `npm install --registry=https://registry.npm.taobao.org` 来安装。（究其原因，我在 `web-bookmarks` 中有提到：[npm 与 cnpm 要点](https://neveryu.github.io/web-bookmarks/tech/npm-cnpm.html)）
 
 Now check the new `dist` directory for your prerendered static files!
 
@@ -43,6 +50,8 @@ If you're using a router or have more than one page to prerender, edit the `rout
 npm install
 npm run dev
 ```
+
+> **重要提示：** 如果你在 `npm install` 时一直没有没有等到成功的结果，你可以尝试删除掉 `package-lock.json` 和 `node_modules` 再尝试；如果还是不行，你可以选择尝试删除掉 `package-lock.json` 和 `node_modules` 后，使用 `npm install --registry=https://registry.npm.taobao.org` 来安装。（究其原因，我在 `web-bookmarks` 中有提到：[npm 与 cnpm 要点](https://neveryu.github.io/web-bookmarks/tech/npm-cnpm.html)）
 
 ## Tip
 

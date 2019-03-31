@@ -10,7 +10,7 @@
 </template>
 <script>
   export default {
-    name: 'header'
+    name: 'yu-header'
   }
 </script>
 <style scoped lang="stylus">

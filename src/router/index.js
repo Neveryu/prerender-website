@@ -7,10 +7,12 @@ import Ticket from '@/views/ticket'
 import Scenery from '@/views/scenery'
 import About from '@/views/about'
 
+const isProd = process.env.NODE_ENV === 'production'
+
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
+  mode: isProd ? 'hash' : 'history',
   routes: [
     {
       path: '/',

@@ -106,7 +106,19 @@ path.resolve(__dirname, './static')
 
 ---
 
-7、关于项目开发以及部署，最重要的说明：
+7、
+在 `main.js` 中：
+```
+mounted () {
+// You'll need this for renderAfterDocumentEvent.
+    document.dispatchEvent(new Event('render-event'))
+}
+```
+这个是必须的，因为只有这里触发了事件 `render-evnet`，`prerender-spa-plugin` 才会开始预渲染。
+
+因为我们在 `PrerenderSPAPlugin` 插件中配置了：`renderAfterDocumentEvent: 'render-event'`；所以这两个地方一定要对应上。
+
+8、关于项目开发以及部署，最重要的说明：
 
 - 1.1 在开发过程中(`npm run dev`)，`vue-router` 请务必使用 `history` 模式。
 - 2.1 如果你的项目是部署在根目录下的话，那么你可以直接打包(`npm run build`)
